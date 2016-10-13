@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var article = {
-    articleone= {
+    articleone: {
         title: 'article one',
         heading: 'a1',
         date: '12 october 2006',
@@ -22,8 +22,8 @@ var article = {
                             content3
                         </p> `
         
-    };
-    articletwo = {
+    },
+    articletwo: {
          title: 'article two',
         heading: 'a2',
         date: '12 october 2006',
@@ -37,8 +37,8 @@ var article = {
                         <p>
                             content3
                         </p>`
-    };
-    articlethree = {
+    },
+    articlethree : {
          title: 'article three',
         heading: 'a3',
         date: '12 october 2006',
