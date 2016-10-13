@@ -90,8 +90,9 @@ function createtemplate (data)
     return htmltemplate;
 }
 
-app.get('/articleone',function(req,res) {
-   res.send(createtemplate(articleone));
+app.get('/articlename',function(req,res) {
+    var articlename =req.param.articlename;
+   res.send(createtemplate(article[articlename]));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
