@@ -6,21 +6,53 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-var articleone= {
-    title: 'article one',
-    heading: 'a1',
-    date: '12 october 2006',
-    content: `
-                    <p>
-                        content1
-                    </p>
-                    <p>
-                        content2
-                    </p>'
-                    <p>
-                        content3
-                    </p> `
-    
+var article = {
+    articleone= {
+        title: 'article one',
+        heading: 'a1',
+        date: '12 october 2006',
+        content: `
+                        <p>
+                            content1
+                        </p>
+                        <p>
+                            content2
+                        </p>'
+                        <p>
+                            content3
+                        </p> `
+        
+    };
+    articletwo = {
+         title: 'article two',
+        heading: 'a2',
+        date: '12 october 2006',
+        content: `
+                        <p>
+                            content1
+                        </p>
+                        <p>
+                            content2
+                        </p>'
+                        <p>
+                            content3
+                        </p>`
+    };
+    articlethree = {
+         title: 'article three',
+        heading: 'a3',
+        date: '12 october 2006',
+        content: `
+                        <p>
+                            content1
+                        </p>
+                        <p>
+                            content2
+                        </p>'
+                        <p>
+                            content3
+                        </p>`
+    }
 };
 function createtemplate (data)
 {
