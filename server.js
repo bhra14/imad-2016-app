@@ -22,8 +22,44 @@ var articleone= {
                     </p> `
     
 };
+function createtemplate (data)
+{
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.contentl;
+    var htmltemplate = `
+    <html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        <body>
+            <div class="cont">
+                <div>
+                     <a href="/">home</a>
+                </div>
+                <hr/>
+                <h3>
+                    ${heading}
+                </h3>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>`
+    ;
+    return htmltemplate;
+}`
+
 app.get('/articleone',function(req,res) {
-   res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+   res.send(createtemplate(articleone));
 });
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
