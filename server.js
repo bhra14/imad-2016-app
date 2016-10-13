@@ -6,6 +6,21 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var articleone= {
+    title: 'article one',
+    heading: 'a1',
+    date: '12 october 2006',
+    content:
+    <p>
+        content1
+    </p>
+    <p>
+        content2
+    </p>
+    <p>
+        content3
+    </p> 
+};
 app.get('/articleone',function(req,res) {
    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
 });
