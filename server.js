@@ -11,6 +11,7 @@ var articleone= {
     heading: 'a1',
     date: '12 october 2006',
     content:
+    <div>
     <p>
         content1
     </p>
@@ -20,6 +21,7 @@ var articleone= {
     <p>
         content3
     </p> 
+    </div>
 };
 app.get('/articleone',function(req,res) {
    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
