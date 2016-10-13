@@ -10,18 +10,17 @@ var articleone= {
     title: 'article one',
     heading: 'a1',
     date: '12 october 2006',
-    content:
-    <div>
-    <p>
-        content1
-    </p>
-    <p>
-        content2
-    </p>
-    <p>
-        content3
-    </p> 
-    </div>
+    content: `
+                    <p>
+                        content1
+                    </p>
+                    <p>
+                        content2
+                    </p>'
+                    <p>
+                        content3
+                    </p> `
+    
 };
 app.get('/articleone',function(req,res) {
    res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
